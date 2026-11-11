@@ -1,0 +1,38 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; padding: 34px 18px 16px; background: #10141e; color: #edf2fa; display: flex; flex-direction: column; }
+#drag-strip { position: absolute; top: 0; left: 160px; right: 0; height: 34px; -webkit-app-region: drag; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; -webkit-app-region: drag; }
+header button { -webkit-app-region: no-drag; }
+h1 { font-size: 18px; margin: 0 0 4px; font-weight: 700; }
+header p, footer { color: #8c99aa; font-size: 11px; margin: 0; }
+button { font: inherit; cursor: pointer; border: 0; color: #e9f1ff; background: #253247; border-radius: 8px; padding: 7px 10px; }
+button:hover { background: #334662; }
+#refresh-all { font-size: 20px; line-height: 1; width: 34px; height: 34px; }
+main { display: grid; gap: 10px; overflow-y: auto; min-height: 0; flex: 1; align-content: start; padding-right: 3px; }
+.account { background: #1b2432; border: 1px solid #2c3b50; border-radius: 12px; padding: 12px 13px; min-height: 102px; }
+.account-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 9px; }
+.account-name { font-size: 13px; font-weight: 650; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.head-actions { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.plan { color: #9eb4d0; font-size: 10px; text-transform: uppercase; }
+.remove-account { background: transparent; color: #8c99aa; font-size: 17px; line-height: 1; padding: 1px 3px; border-radius: 4px; }
+.remove-account:hover { color: #edf2fa; background: #334662; }
+.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.metric-head { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px; }
+.metric-head strong { font-size: 12px; }
+.track { height: 6px; background: #364459; border-radius: 9px; overflow: hidden; }
+.fill { display: block; height: 100%; background: #58c7b0; border-radius: inherit; }
+.fill.low { background: #f0ae5b; }
+.fill.empty { background: #e66c70; }
+.reset { color: #8c99aa; font-size: 10px; margin-top: 4px; }
+.empty-state { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #aebbd0; font-size: 12px; }
+.actions { display: flex; gap: 6px; flex-shrink: 0; }
+.error { color: #efaaa9; overflow-wrap: anywhere; }
+.code { display: block; font-size: 19px; font-weight: 700; letter-spacing: 2px; margin-top: 5px; color: #fff; user-select: all; }
+#add-account { margin-top: 10px; flex-shrink: 0; background: transparent; border: 1px dashed #52647c; color: #a9c5e1; font-size: 13px; font-weight: 650; }
+#settings { flex-shrink: 0; margin-top: 10px; color: #aebbd0; font-size: 12px; }
+#settings label { display: flex; align-items: center; gap: 7px; }
+#settings input { accent-color: #58c7b0; }
+#launch-hint { margin: 6px 0 0; color: #8c99aa; font-size: 11px; }
+footer { text-align: center; margin-top: 10px; flex-shrink: 0; }

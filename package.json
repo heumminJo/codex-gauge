@@ -1,0 +1,38 @@
+{
+  "name": "codex-gauge",
+  "version": "0.1.0",
+  "private": true,
+  "productName": "Codex Gauge",
+  "description": "A compact macOS menu bar view for multiple Codex accounts",
+  "author": "heumminJo",
+  "license": "MIT",
+  "repository": "https://github.com/heumminJo/codex-gauge",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "dist:mac": "electron-builder --mac zip --arm64 --x64"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "io.github.heumminJo.codex-gauge",
+    "productName": "Codex Gauge",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.png",
+      "identity": "-",
+      "hardenedRuntime": false,
+      "target": "zip"
+    }
+  }
+}

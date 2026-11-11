@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'">
+  <title>Codex Gauge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="drag-strip" aria-hidden="true"></div>
+  <header>
+    <div><h1>Codex Gauge</h1><p><span id="account-count">계정 3개</span> · 5분마다 갱신</p></div>
+    <button id="refresh-all" type="button" aria-label="모두 새로고침">↻</button>
+  </header>
+  <main id="accounts" aria-live="polite"></main>
+  <button id="add-account" type="button">+ 계정 추가</button>
+  <div id="settings">
+    <label><input id="launch-at-login" type="checkbox"> Mac 로그인 시 자동 실행</label>
+    <p id="launch-hint"></p>
+  </div>
+  <footer>남은 비율 · Codex CLI에서 직접 조회</footer>
+  <script src="quota-display.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
