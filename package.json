@@ -1,6 +1,6 @@
 {
   "name": "codex-gauge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "productName": "Codex Gauge",
   "description": "A compact macOS menu bar view for multiple Codex accounts",
@@ -14,7 +14,7 @@
     "dist:mac": "electron-builder --mac zip --arm64 --x64"
   },
   "devDependencies": {
-    "electron": "^38.0.0",
+    "electron": "45.3.0",
     "electron-builder": "^26.0.0"
   },
   "build": {
