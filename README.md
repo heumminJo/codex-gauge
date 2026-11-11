@@ -2,6 +2,14 @@
 
 macOS 메뉴 막대에서 여러 Codex 계정의 사용량을 확인하는 비공식 Electron 앱입니다. 각 계정의 남은 5시간·주간 비율과 초기화 시각을 표시합니다. 처음에는 계정 3개가 준비되고 상세 창의 `+ 계정 추가`로 늘릴 수 있습니다.
 
+## 화면 예시
+
+아래 계정 주소와 사용량은 모두 예시 데이터입니다.
+
+| 사용량 확인 | 계정 로그인 |
+|:--:|:--:|
+| ![예시 계정 세 개의 사용량 화면](docs/screenshots/overview.png) | ![예시 계정의 로그인 화면](docs/screenshots/login.png) |
+
 ## 설치
 
 1. [Releases](https://github.com/heumminJo/codex-gauge/releases/latest)에서 Mac에 맞는 ZIP을 받습니다.
