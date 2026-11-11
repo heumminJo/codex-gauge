@@ -5,8 +5,8 @@ macOS 메뉴 막대에서 여러 Codex 계정의 사용량을 확인하는 비�
 ## 설치
 
 1. [Releases](https://github.com/heumminJo/codex-gauge/releases/latest)에서 Mac에 맞는 ZIP을 받습니다.
-   - Apple Silicon: `Codex Gauge-*-arm64-mac.zip`
-   - Intel: `Codex Gauge-*-mac.zip`
+   - Apple Silicon: `Codex.Gauge-*-arm64-mac.zip`
+   - Intel: `Codex.Gauge-*-mac.zip`
 2. 압축을 풀고 `Codex Gauge.app`을 `응용 프로그램` 폴더로 옮깁니다.
 3. [ChatGPT macOS 앱](https://chatgpt.com/features/desktop/) 또는 [Codex CLI](https://learn.chatgpt.com/docs/codex/cli)를 설치합니다. Codex Gauge는 그 안의 공식 Codex CLI로 사용량을 읽습니다.
 4. 앱을 실행하고 각 계정의 **로그인**을 눌러 브라우저 인증을 마칩니다. 한 번에 한 계정씩 연결합니다.
