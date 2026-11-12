@@ -19,13 +19,13 @@ test('available reset count appears on a separate account menu row', () => {
   assert.deepEqual(accountMenuLines({ index: 0, email: 'sample@example.com', connected: true, ...limits }), [
     'sample@example.com',
     '    5시간 75% 남음  ·  주간 50% 남음',
-    '    사용량 초기화 2회 남음'
+    '    사용량 초기화 2회'
   ]);
 });
 
 test('zero is known and displayed; missing or malformed counts are hidden', () => {
   assert.equal(normalizeLimits(response({ availableCount: 0, credits: [] })).resetCreditCount, 0);
-  assert.equal(resetCreditsLabel(0), '사용량 초기화 0회 남음');
+  assert.equal(resetCreditsLabel(0), '사용량 초기화 0회');
   for (const value of [undefined, null, { availableCount: null }, { availableCount: -1 }, { availableCount: 1.5 }, { availableCount: '2' }]) {
     const limits = normalizeLimits(response(value));
     assert.equal(limits.resetCreditCount, null);
