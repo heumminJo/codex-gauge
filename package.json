@@ -1,6 +1,6 @@
 {
   "name": "codex-gauge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "productName": "Codex Gauge",
   "description": "A compact macOS menu bar view for multiple Codex accounts",

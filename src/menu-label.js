@@ -1,6 +1,7 @@
 'use strict';
 
 const { missingQuotaLabel } = require('./quota-display');
+const { resetCreditsLabel } = require('./reset-credits');
 
 function accountMenuLabel(account) {
   const name = account.email || `계정 ${account.displayIndex || account.index + 1}`;
@@ -23,7 +24,10 @@ function accountMenuLines(account) {
   if (account.connected) {
     const fiveHour = account.fiveHour ? `${account.fiveHour.remainingPercent}% 남음` : missingQuotaLabel(account.plan, 'fiveHour');
     const weekly = account.weekly ? `${account.weekly.remainingPercent}% 남음` : missingQuotaLabel(account.plan, 'weekly');
-    return [name, `    5시간 ${fiveHour}  ·  주간 ${weekly}`];
+    const lines = [name, `    5시간 ${fiveHour}  ·  주간 ${weekly}`];
+    const resetCredits = resetCreditsLabel(account.resetCreditCount);
+    if (resetCredits) lines.push(`    ${resetCredits}`);
+    return lines;
   }
   const status = {
     loading: '조회 중…',

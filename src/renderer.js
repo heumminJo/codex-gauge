@@ -67,6 +67,13 @@ function renderAccount(account, removable) {
       makeMetric('주간', account.weekly, displayMissingQuota(account.plan, 'weekly'))
     );
     card.append(metrics);
+    const resetCredits = window.resetCreditsLabel(account.resetCreditCount);
+    if (resetCredits) {
+      const count = document.createElement('div');
+      count.className = 'reset-credits';
+      count.textContent = resetCredits;
+      card.append(count);
+    }
   } else {
     const empty = document.createElement('div');
     empty.className = 'empty-state';

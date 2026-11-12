@@ -26,6 +26,7 @@ main { display: grid; gap: 10px; overflow-y: auto; min-height: 0; flex: 1; align
 .fill.low { background: #f0ae5b; }
 .fill.empty { background: #e66c70; }
 .reset { color: #8c99aa; font-size: 10px; margin-top: 4px; }
+.reset-credits { color: #a9c5e1; font-size: 11px; margin-top: 9px; }
 .empty-state { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #aebbd0; font-size: 12px; }
 .actions { display: flex; gap: 6px; flex-shrink: 0; }
 .error { color: #efaaa9; overflow-wrap: anywhere; }

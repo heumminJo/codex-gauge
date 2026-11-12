@@ -225,8 +225,7 @@ function updateTrayMenu() {
   tray.setContextMenu(Menu.buildFromTemplate([
     { label: 'Codex 사용량', enabled: false },
     ...states.flatMap(account => [
-      { label: accountMenuLines(account)[0], click: () => window.show() },
-      { label: accountMenuLines(account)[1], click: () => window.show() },
+      ...accountMenuLines(account).map(label => ({ label, click: () => window.show() })),
       { type: 'separator' }
     ]),
     { label: '사용량 보기', click: () => window.show() },

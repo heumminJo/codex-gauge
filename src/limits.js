@@ -23,11 +23,13 @@ function normalizeLimits(response) {
   const weekly = hasDurations
     ? windows.find(window => window.windowDurationMins === 10080)
     : bucket.secondary;
+  const availableCount = response?.rateLimitResetCredits?.availableCount;
 
   return {
     plan: bucket.planType ?? null,
     fiveHour: normalizeWindow(fiveHour),
     weekly: normalizeWindow(weekly),
+    resetCreditCount: Number.isSafeInteger(availableCount) && availableCount >= 0 ? availableCount : null,
     checkedAt: Date.now()
   };
 }
